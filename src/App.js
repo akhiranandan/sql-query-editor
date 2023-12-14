@@ -1,47 +1,13 @@
 import "./App.css";
-import React from 'react';
-import { useTable } from "react-table";
+import React from "react";
 import sqlLogo from "./assests/sql.png";
 import msgIcon from "./assests/message.svg";
 import copy from "./assests/copy.png";
 import clear from "./assests/clear.png";
 import previous from "./assests/previous.png";
-import fakeData from "./assests/MOCK_DATA.json"
+import DisplayTable from "./components/DisplayTable";
 
 function App() {
-  const data = React.useMemo(() => fakeData, []);
-  const columns = React.useMemo(
-    () => [
-      {
-        Header: "ID",
-        accessor: "id",
-      },
-      {
-        Header: "First Name",
-        accessor: "first_name",
-      },
-      {
-        Header: "Last Name",
-        accessor: "last_name",
-      },
-      {
-        Header: "Email",
-        accessor: "email",
-      },
-      {
-        Header: "Gender",
-        accessor: "gender",
-      },
-      {
-        Header: "University",
-        accessor: "university",
-      },
-    ],
-    []
-  );
-
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable({ columns, data });
   return (
     <div className="App">
       <div className="sideBar">
@@ -88,33 +54,7 @@ function App() {
         </div>
       </div>
       <div className="main">
-      <div className="container">
-        <table {...getTableProps()}>
-          <thead>
-            {headerGroups.map((headerGroup) => (
-              <tr {...headerGroup.getHeaderGroupProps()}>
-                {headerGroup.headers.map((column) => (
-                  <th {...column.getHeaderProps()}>
-                    {column.render("Header")}
-                  </th>
-                ))}
-              </tr>
-            ))}
-          </thead>
-          <tbody {...getTableBodyProps()}>
-            {rows.map((row) => {
-              prepareRow(row);
-              return (
-                <tr {...row.getRowProps()}>
-                  {row.cells.map((cell) => (
-                    <td {...cell.getCellProps()}> {cell.render("Cell")} </td>
-                  ))}
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
+        <DisplayTable />
       </div>
     </div>
   );
