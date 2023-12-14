@@ -1,7 +1,7 @@
 import "../App.css";
 import React from "react";
 import { useTable } from "react-table";
-import fakeData from "../assests/MOCK_DATA.json";
+import fakeData from "../data/MALE.json";
 
 const DisplayTable = () => {
   const data = React.useMemo(() => fakeData, []);
