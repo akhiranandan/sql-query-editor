@@ -6,6 +6,7 @@ import copy from "./assests/copy.png";
 import clear from "./assests/clear.png";
 import previous from "./assests/previous.png";
 import DisplayTable from "./components/DisplayTable";
+import maleData from "./data/MALE.json";
 
 function App() {
   return (
@@ -54,7 +55,7 @@ function App() {
         </div>
       </div>
       <div className="main">
-        <DisplayTable />
+        <DisplayTable displayData={maleData}/>
       </div>
     </div>
   );

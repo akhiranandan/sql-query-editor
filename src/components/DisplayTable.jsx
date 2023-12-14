@@ -3,8 +3,8 @@ import React from "react";
 import { useTable } from "react-table";
 import fakeData from "../data/MALE.json";
 
-const DisplayTable = () => {
-  const data = React.useMemo(() => fakeData, []);
+const DisplayTable = ({displayData}) => {
+  const data = React.useMemo(() => displayData, [displayData]);
   const columns = React.useMemo(
     () => [
       {
