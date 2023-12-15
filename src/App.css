@@ -56,13 +56,14 @@ body {
 }
 
 .query {
+  font-size: 11px !important;
   display: flex;
   align-items: center;
   background: transparent ;
   color: rgba(222, 222, 222, 1);
   padding: 15 rem;
-  width: 33rem;
-  height: 5rem;
+  width: 40rem;
+  height: 4rem;
   border-radius: 0.5rem;
   border: 1px solid rgba(98, 98, 98, 1);
   margin: 12px !important;
@@ -88,7 +89,7 @@ body {
   .container {
     position: absolute;
     top: 50%;
-    left: 64%;
+    left: 66%;
     max-height: 780px;
     overflow-y: scroll;
     -webkit-transform: translate(-50%, -50%);
