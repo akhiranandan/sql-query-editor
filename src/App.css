@@ -5,7 +5,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 71%;
 }
 
 body {
@@ -59,8 +59,6 @@ body {
   font-size: 11px !important;
   display: flex;
   align-items: center;
-  background: transparent ;
-  color: rgba(222, 222, 222, 1);
   padding: 15 rem;
   width: 40rem;
   height: 4rem;
@@ -70,10 +68,10 @@ body {
 
 .textfield {
   width: 40rem !important;
-  border: 1px solid rgba(98, 98, 98, 1) !important;
-  left: 11px;
-  margin-top: 20px !important;
-  margin-bottom: 20px !important;
+  height: 4rem !important;
+}
+.form {
+  margin-left: 13px;
 }
 
 .ClearButton {
@@ -102,9 +100,10 @@ body {
 }
 
   .container {
+    font-size: 80%;
     position: absolute;
     top: 50%;
-    left: 66%;
+    left: 77%;
     max-height: 780px;
     overflow-y: scroll;
     -webkit-transform: translate(-50%, -50%);

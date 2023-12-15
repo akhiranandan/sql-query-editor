@@ -10,7 +10,6 @@ import categoryID from "./data/CATEGORYID.json";
 import entireData from "./data/ENTIRE_DATA.json";
 import reorderLevel from "./data/REORDERLEVEL.json";
 import discontinued from "./data/DISCONTINUED.json";
-import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import SendIcon from "@mui/icons-material/Send";
@@ -69,17 +68,34 @@ function App() {
               <img src={msgIcon} alt="query" />
               SELECT * FROM products WHERE unitPrice > '20'
             </Button>
-            Select any query from the above options or write your own query
-            <TextField
-              className="textfield"
-              fullWidth
-              label=""
-              id="fullWidth"
-            />
-            <Button className="ClearButton" variant="outlined" startIcon={<DeleteIcon />}>
+            <form className="form">
+              <div class="form-group" >
+                <label for="exampleInputEmail1">Select any query from the above options or write your own query</label>
+                <input 
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                  className="textfield"
+                />
+                <small id="emailHelp" class="form-text text-muted">
+                  We'll never share your email with anyone else.
+                </small>
+              </div>
+            </form>
+            <Button
+              className="ClearButton"
+              variant="outlined"
+              startIcon={<DeleteIcon />}
+            >
               Clear
             </Button>
-            <Button className="RunButton" variant="contained" endIcon={<SendIcon />}>
+            <Button
+              className="RunButton"
+              variant="contained"
+              endIcon={<SendIcon />}
+            >
               Run
             </Button>
           </div>
