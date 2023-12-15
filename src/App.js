@@ -6,18 +6,16 @@ import copy from "./assests/copy.png";
 import clear from "./assests/clear.png";
 import previous from "./assests/previous.png";
 import DisplayTable from "./components/DisplayTable";
-import categoryID from "./data/CATEGORYID.json";
-import entireData from "./data/ENTIRE_DATA.json";
-import reorderLevel from "./data/REORDERLEVEL.json";
-import discontinued from "./data/DISCONTINUED.json";
 import { Button } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import SendIcon from "@mui/icons-material/Send";
+import {dataa} from "./data/firstData.js"
+import {data1} from "./data/secData.js"
 
 function App() {
-  let [data, setData] = useState(entireData);
-  const handleData = (e) => {
-    setData(e);
+  let [value, setValue] = useState(dataa);
+  const handleValue = (e) => {
+    setValue(e);
   };
   return (
     <div className="App">
@@ -31,7 +29,7 @@ function App() {
             <Button
               variant="contained"
               className="query"
-              onClick={() => handleData(entireData)}
+              onClick={() => handleValue(dataa)}
             >
               <img src={msgIcon} alt="query" />
               SELECT * FROM products
@@ -39,7 +37,7 @@ function App() {
             <Button
               className="query"
               variant="contained"
-              onClick={() => handleData(categoryID)}
+              onClick={() => handleValue(data1)}
             >
               <img src={msgIcon} alt="query" />
               SELECT * FROM products WHERE categoryID = 2
@@ -47,7 +45,7 @@ function App() {
             <Button
               variant="contained"
               className="query"
-              onClick={() => handleData(reorderLevel)}
+              onClick={() => handleValue(dataa)}
             >
               <img src={msgIcon} alt="query" />
               SELECT * FROM products WHERE reorderLevel = 0
@@ -55,7 +53,7 @@ function App() {
             <Button
               variant="contained"
               className="query"
-              onClick={() => handleData(discontinued)}
+              onClick={() => handleValue(data1)}
             >
               <img src={msgIcon} alt="query" />
               SELECT * FROM products WHERE discontinued = 1
@@ -63,7 +61,7 @@ function App() {
             <Button
               variant="contained"
               className="query"
-              onClick={() => handleData(reorderLevel)}
+              onClick={() => handleValue(dataa)}
             >
               <img src={msgIcon} alt="query" />
               SELECT * FROM products WHERE unitPrice > '20'
@@ -115,7 +113,7 @@ function App() {
         </div>
       </div>
       <div className="main">
-        <DisplayTable displayData={data} />
+        <DisplayTable data={value} />
       </div>
     </div>
   );

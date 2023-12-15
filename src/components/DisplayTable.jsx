@@ -3,9 +3,8 @@ import {
   MaterialReactTable,
   useMaterialReactTable,
 } from 'material-react-table';
-import { data } from '../data/makeData';
 
-const DisplayTable = () => {
+const DisplayTable = ({data}) => {
   const columns = useMemo(
     //column definitions...
     () => [
