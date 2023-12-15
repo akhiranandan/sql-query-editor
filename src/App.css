@@ -59,7 +59,7 @@ body {
   font-size: 11px !important;
   display: flex;
   align-items: center;
-  padding: 15 rem;
+  padding: 10 rem !important;
   width: 40rem;
   height: 4rem;
   border-radius: 0.5rem;
@@ -69,6 +69,7 @@ body {
 .textfield {
   width: 40rem !important;
   height: 4rem !important;
+  padding-left: 5% !important;
 }
 .form {
   margin-left: 13px;
@@ -98,49 +99,3 @@ body {
   align-items: center;
   font-size: 1.3rem;
 }
-
-  .container {
-    font-size: 80%;
-    position: absolute;
-    top: 50%;
-    left: 77%;
-    max-height: 780px;
-    overflow-y: scroll;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-  table {
-    width: 800px;
-    height: 200px;
-    border-collapse: collapse;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  }
-  th,
-  td {
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #fff;
-  }
-  th {
-    text-align: left;
-  }
-  thead th {
-    background-color: #55608f;
-  }
-  tbody tr:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-  }
-  tbody td {
-    position: relative;
-  }
-  tbody td:hover:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -9999px;
-    bottom: -9999px;
-    background-color: rgba(255, 255, 255, 0.2);
-    z-index: -1;
-  }

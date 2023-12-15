@@ -1,84 +1,58 @@
-import "../App.css";
-import React from "react";
-import { useTable } from "react-table";
+import { useMemo } from 'react';
+import {
+  MaterialReactTable,
+  useMaterialReactTable,
+} from 'material-react-table';
+import { data } from '../data/makeData';
 
-
-const DisplayTable = ({displayData}) => {
-  const data = React.useMemo(() => displayData, [displayData]);
-  const columns = React.useMemo(
+const DisplayTable = () => {
+  const columns = useMemo(
+    //column definitions...
     () => [
       {
-        Header: "productID",
-        accessor: "productID",
+        accessorKey: 'firstName',
+        header: 'First Name',
+        footer: 'First Name',
       },
       {
-        Header: "productName",
-        accessor: "productName",
+        accessorKey: 'lastName',
+        header: 'Last Name',
+        footer: 'Last Name',
       },
       {
-        Header: "supplierID",
-        accessor: "supplierID",
+        accessorKey: 'email',
+        header: 'Email',
+        footer: 'Email',
       },
       {
-        Header: "categoryID",
-        accessor: "categoryID",
-      },
-      {
-        Header: "quantityPerUnit",
-        accessor: "quantityPerUnit",
-      },
-      {
-        Header: "unitPrice",
-        accessor: "unitPrice",
-      },
-      {
-        Header: "unitsInStock",
-        accessor: "unitsInStock",
-      },
-      {
-        Header: "unitsOnOrder",
-        accessor: "unitsOnOrder",
-      },
-      {
-        Header: "reorderLevel",
-        accessor: "reorderLevel",
-      },
-      {
-        Header: "discontinued",
-        accessor: "discontinued",
+        accessorKey: 'city',
+        header: 'City',
+        footer: 'City',
       },
     ],
     []
+    //end
   );
 
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable({ columns, data });
-  return (
-    <div className="container">
-      <table {...getTableProps()}>
-        <thead>
-          {headerGroups.map((headerGroup) => (
-            <tr {...headerGroup.getHeaderGroupProps()}>
-              {headerGroup.headers.map((column) => (
-                <th className="" {...column.getHeaderProps()}>{column.render("Header")}</th>
-              ))}
-            </tr>
-          ))}
-        </thead>
-        <tbody {...getTableBodyProps()}>
-          {rows.map((row) => {
-            prepareRow(row);
-            return (
-              <tr {...row.getRowProps()}>
-                {row.cells.map((cell) => (
-                  <td {...cell.getCellProps()}> {cell.render("Cell")} </td>
-                ))}
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
-  );
+  const table = useMaterialReactTable({
+    columns,
+    data,
+    enableBottomToolbar: false,
+    enableStickyHeader: true,
+    enableStickyFooter: true,
+    enablePagination: false,
+    muiTableContainerProps: { sx: { maxHeight: '770px'} },
+    muiTableBodyCellProps: {
+      sx: (theme) => ({
+        backgroundColor:
+          theme.palette.mode === 'dark'
+            ? theme.palette.grey[900]
+            : theme.palette.grey[50],
+      }),
+    },
+  });
+
+  return <MaterialReactTable table={table} />;
 };
+
 export default DisplayTable;
