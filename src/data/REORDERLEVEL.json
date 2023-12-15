@@ -1,0 +1,26 @@
+[
+    {
+        "productID": 76,
+        "productName": "Lakkalikööri",
+        "supplierID": 23,
+        "categoryID": 1,
+        "quantityPerUnit": "500 ml",
+        "unitPrice": 18,
+        "unitsInStock": 57,
+        "unitsOnOrder": 0,
+        "reorderLevel": 20,
+        "discontinued": 0
+      },
+      {
+        "productID": 77,
+        "productName": "Original Frankfurter grüne Soße",
+        "supplierID": 12,
+        "categoryID": 2,
+        "quantityPerUnit": "12 boxes",
+        "unitPrice": 13,
+        "unitsInStock": 32,
+        "unitsOnOrder": 0,
+        "reorderLevel": 15,
+        "discontinued": 0
+      }
+]

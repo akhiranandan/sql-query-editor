@@ -8,28 +8,44 @@ const DisplayTable = ({displayData}) => {
   const columns = React.useMemo(
     () => [
       {
-        Header: "ID",
-        accessor: "id",
+        Header: "productID",
+        accessor: "productID",
       },
       {
-        Header: "First Name",
-        accessor: "first_name",
+        Header: "productName",
+        accessor: "productName",
       },
       {
-        Header: "Last Name",
-        accessor: "last_name",
+        Header: "supplierID",
+        accessor: "supplierID",
       },
       {
-        Header: "Email",
-        accessor: "email",
+        Header: "categoryID",
+        accessor: "categoryID",
       },
       {
-        Header: "Gender",
-        accessor: "gender",
+        Header: "quantityPerUnit",
+        accessor: "quantityPerUnit",
       },
       {
-        Header: "University",
-        accessor: "university",
+        Header: "unitPrice",
+        accessor: "unitPrice",
+      },
+      {
+        Header: "unitsInStock",
+        accessor: "unitsInStock",
+      },
+      {
+        Header: "unitsOnOrder",
+        accessor: "unitsOnOrder",
+      },
+      {
+        Header: "reorderLevel",
+        accessor: "reorderLevel",
+      },
+      {
+        Header: "discontinued",
+        accessor: "discontinued",
       },
     ],
     []

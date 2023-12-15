@@ -58,19 +58,18 @@ body {
 .query {
   display: flex;
   align-items: center;
-  background: transparent;
+  background: transparent ;
   color: rgba(222, 222, 222, 1);
-  padding: 1.5 rem;
-  width: 40rem;
+  padding: 15 rem;
+  width: 33rem;
   height: 5rem;
-  margin: 1rem auto;
   border-radius: 0.5rem;
   border: 1px solid rgba(98, 98, 98, 1);
+  margin: 12px !important;
 }
 
 .query>img {
-  margin-right: 2rem;
-  margin-left: 2rem;
+  margin-right: 1rem;
   object-fit: cover;
   height: 1.75rem;
 }
@@ -97,7 +96,7 @@ body {
   }
   table {
     width: 800px;
-    height: 800px;
+    height: 200px;
     border-collapse: collapse;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
