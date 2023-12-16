@@ -11,7 +11,7 @@ html {
 body {
   background: rgb(51, 51, 51);
   color: white;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .App {
@@ -38,15 +38,8 @@ body {
 }
 
 .upperSide {
-
   border-bottom: 1px solid rgb(100, 100, 100);
   height: 60%;
-}
-
-.listItemsImg {
-  height: 30px;
-  margin: 1rem;
-  padding-right: 1rem;
 }
 
 .upperSideTop {
@@ -56,6 +49,7 @@ body {
   height: 74px;
   padding-left: 2%;
 }
+
 .upperSideBottom {
   padding: 2rem;
 }
@@ -72,10 +66,14 @@ body {
 }
 
 .textfield {
-  width: 40rem !important;
-  height: 4rem !important;
-  padding-left: 5% !important;
+  font-family: "JetBrains Mono", monospace !important;
+  font-family: "Poppins", sans-serif !important;
+  width: 41rem !important;
+  height: 13rem !important;
+  padding: 3% !important;
+  margin-top: 1% !important;
 }
+
 .form {
   margin-left: 13px;
 }
@@ -92,7 +90,7 @@ body {
   margin-left: 7px !important;
 }
 
-.query>img {
+.query > img {
   margin-right: 1rem;
   object-fit: cover;
   height: 1.75rem;
@@ -102,9 +100,11 @@ body {
   padding: 2rem;
 }
 
-.listItems {
-  margin: 0.75rem;
-  display: flex;
+.footer {
+  background-color: rgb(77, 77, 77);
+  color: black;
+  height: 6.5%;
+  padding-left: 14%;
+  padding-top: 3%;
   align-items: center;
-  font-size: 1.3rem;
 }
