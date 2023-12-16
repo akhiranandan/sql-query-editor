@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "@mui/material";
 import { data1 } from "../data/secData";
 
-const LowerSide = ({handleValue}) => {
+const TextField = ({handleValue}) => {
     const [message, setMessage] = useState("");
     const handleChange = (event) => {
     setMessage(event.target.value);
@@ -46,4 +46,4 @@ const LowerSide = ({handleValue}) => {
     )
 }
 
-export default LowerSide;
+export default TextField;

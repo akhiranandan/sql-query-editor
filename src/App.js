@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import sqlLogo from "./assests/sql.png";
 import DisplayTable from "./components/DisplayTable";
 import { dataa } from "./data/firstData.js";
-import LowerSide from "./components/LowerSide.jsx";
+import TextField from "./components/TextField.jsx";
 import QueryContainer from "./components/QueryContainer.jsx";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
           </div>
           <QueryContainer handleValue={handleValue}/>
         </div>
-        <LowerSide handleValue={handleValue}/>
+        <TextField handleValue={handleValue}/>
       </div>
       <div className="main">
         <DisplayTable data={value} />
