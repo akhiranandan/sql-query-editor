@@ -81,10 +81,14 @@ body {
 }
 
 .ClearButton {
+  margin-top: 3% !important;
   margin-left: 230px !important;
+  left: 40px !important;
 }
 
 .RunButton {
+  left: 50px !important;
+  margin-top: 3% !important;
   margin-left: 7px !important;
 }
 

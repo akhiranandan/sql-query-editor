@@ -76,25 +76,17 @@ function App() {
           </div>
         </div>
         <div className="lowerSide">
-          <form className="form">
-            <div class="form-group">
-              <label for="exampleInputEmail1">
+          <form>
+              <label>
                 Select any query from the above options or write your own query
               </label>
               <input
-                type="queryinput"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
+                type="text"
                 placeholder="Enter Query"
                 className="textfield"
                 value={message}
                 onChange={handleChange}
               />
-              <small id="emailHelp" class="form-text text-muted">
-                We'll never share your email with anyone else.
-              </small>
-            </div>
           </form>
           <Button
             className="ClearButton"
