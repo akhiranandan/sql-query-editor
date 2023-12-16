@@ -1,6 +1,6 @@
 # SQL QUERY EDITOR
 
->This React.js-based web application is a user-friendly SQL query editor. It takes queries as input and gives table-based responses, including a range of predefined queries linked with corresponding tables for enhanced convenience and efficiency
+>This React.js-based web application is a user-friendly SQL query editor. It takes queries as input and gives table-based responses. It has a range of predefined queries linked with corresponding tables for enhanced convenience and efficiency
 
 ## Technologies/Packages
 
