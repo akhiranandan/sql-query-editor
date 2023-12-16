@@ -2,12 +2,12 @@ import "./App.css";
 import React, { useState } from "react";
 import sqlLogo from "./assests/sql.png";
 import DisplayTable from "./components/DisplayTable";
-import { dataa } from "./data/firstData.js";
+import { defData } from "./data/DefData.js";
 import TextField from "./components/TextField.jsx";
 import QueryContainer from "./components/QueryContainer.jsx";
 
 function App() {
-  let [value, setValue] = useState(dataa);
+  let [value, setValue] = useState(defData);
   const handleValue = (e) => {
     setValue(e);
   };

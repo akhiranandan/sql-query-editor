@@ -1,4 +1,4 @@
-export const dataa = [
+export const defData = [
   {
     first_name: "Vivia",
     last_name: "Giggs",

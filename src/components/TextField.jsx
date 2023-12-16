@@ -2,10 +2,16 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import SendIcon from "@mui/icons-material/Send";
 import { useState } from "react";
 import { Button } from "@mui/material";
-import { data1 } from "../data/secData";
+import { runData } from "../data/RunData";
+import { runData2 } from "../data/RunData2";
 
 const TextField = ({handleValue}) => {
     const [message, setMessage] = useState("");
+    const [count, setCount] = useState(0);
+    const handleClick = () => {
+      setCount(count+1);
+      count % 2 === 0 ? handleValue(runData) : handleValue(runData2);
+    }
     const handleChange = (event) => {
     setMessage(event.target.value);
   };
@@ -18,7 +24,7 @@ const TextField = ({handleValue}) => {
               </label>
               <textarea
                 type="text"
-                placeholder="Enter Query"
+                placeholder="SELECT * FROM CUSTOMERS"
                 className="textfield"
                 value={message}
                 onChange={handleChange}
@@ -35,7 +41,7 @@ const TextField = ({handleValue}) => {
           <Button
             className="RunButton"
             variant="contained"
-            onClick={() => handleValue(data1)}
+            onClick={handleClick}
             endIcon={<SendIcon />}
           >
             Run
