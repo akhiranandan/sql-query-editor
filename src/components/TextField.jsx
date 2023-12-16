@@ -7,6 +7,7 @@ import { runData2 } from "../data/RunData2";
 
 const TextField = ({handleValue}) => {
     const [message, setMessage] = useState("");
+    // using a counter to change the table data
     const [count, setCount] = useState(0);
     const handleClick = () => {
       setCount(count+1);
