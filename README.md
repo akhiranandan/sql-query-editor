@@ -10,13 +10,5 @@
 - Google Fonts
 
 ## Page Load Time
-
-- Backend: NodeJS, ExpressJS
-- Database: MongoDB
-- Frontend: HTML, CSS, JavaScript, ReactJS
-
-## Page Load Time
-
-- Backend: NodeJS, ExpressJS
-- Database: MongoDB
-- Frontend: HTML, CSS, JavaScript, ReactJS
+<img width="767" alt="Screenshot 2023-12-16 at 6 29 22 PM" src="https://github.com/akhiranandan/sql-query-editor/assets/75657830/5fb0c2da-7aec-4635-a11d-6057e423bcf8">
+Measured using Pingdom Website Speed Test
