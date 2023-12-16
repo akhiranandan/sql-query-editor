@@ -6,15 +6,14 @@ import {
 
 const DisplayTable = ({data}) => {
   const columns = useMemo(
-    //column definitions...
     () => [
       {
-        accessorKey: 'firstName',
+        accessorKey: 'first_name',
         header: 'First Name',
         footer: 'First Name',
       },
       {
-        accessorKey: 'lastName',
+        accessorKey: 'last_name',
         header: 'Last Name',
         footer: 'Last Name',
       },
@@ -30,7 +29,6 @@ const DisplayTable = ({data}) => {
       },
     ],
     []
-    //end
   );
 
   const table = useMaterialReactTable({

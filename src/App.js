@@ -2,17 +2,21 @@ import "./App.css";
 import React, { useState } from "react";
 import sqlLogo from "./assests/sql.png";
 import msgIcon from "./assests/message.svg";
-import copy from "./assests/copy.png";
-import clear from "./assests/clear.png";
-import previous from "./assests/previous.png";
 import DisplayTable from "./components/DisplayTable";
 import { Button } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import SendIcon from "@mui/icons-material/Send";
-import {dataa} from "./data/firstData.js"
-import {data1} from "./data/secData.js"
+import { dataa } from "./data/firstData.js";
+import { data1 } from "./data/secData.js";
 
 function App() {
+  const [message, setMessage] = useState("");
+
+  const handleChange = (event) => {
+    setMessage(event.target.value);
+  };
+
+  const handleClick = () => {};
   let [value, setValue] = useState(dataa);
   const handleValue = (e) => {
     setValue(e);
@@ -26,6 +30,9 @@ function App() {
             <span className="brand">SQL Editor</span>
           </div>
           <div className="upperSideBottom">
+           
+              Click on the following options to run a query
+          
             <Button
               variant="contained"
               className="query"
@@ -64,52 +71,46 @@ function App() {
               onClick={() => handleValue(dataa)}
             >
               <img src={msgIcon} alt="query" />
-              SELECT * FROM products WHERE unitPrice > '20'
-            </Button>
-            <form className="form">
-              <div class="form-group" >
-                <label for="exampleInputEmail1">Select any query from the above options or write your own query</label>
-                <input 
-                  type="email"
-                  class="form-control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                  placeholder="Enter email"
-                  className="textfield"
-                />
-                <small id="emailHelp" class="form-text text-muted">
-                  We'll never share your email with anyone else.
-                </small>
-              </div>
-            </form>
-            <Button
-              className="ClearButton"
-              variant="outlined"
-              startIcon={<DeleteIcon />}
-            >
-              Clear
-            </Button>
-            <Button
-              className="RunButton"
-              variant="contained"
-              endIcon={<SendIcon />}
-            >
-              Run
+              SELECT * FROM products WHERE unitPrice &gt; '20'
             </Button>
           </div>
         </div>
-        <div className="lowerSide"></div>
-        <div className="listItems">
-          <img src={copy} alt="" className="listItemsImg" />
-          Copy
-        </div>
-        <div className="listItems">
-          <img src={clear} alt="" className="listItemsImg" />
-          Clear
-        </div>
-        <div className="listItems">
-          <img src={previous} alt="" className="listItemsImg" />
-          Previous
+        <div className="lowerSide">
+          <form className="form">
+            <div class="form-group">
+              <label for="exampleInputEmail1">
+                Select any query from the above options or write your own query
+              </label>
+              <input
+                type="queryinput"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Enter Query"
+                className="textfield"
+                value={message}
+                onChange={handleChange}
+              />
+              <small id="emailHelp" class="form-text text-muted">
+                We'll never share your email with anyone else.
+              </small>
+            </div>
+          </form>
+          <Button
+            className="ClearButton"
+            variant="outlined"
+            startIcon={<DeleteIcon />}
+          >
+            Clear
+          </Button>
+          <Button
+            className="RunButton"
+            variant="contained"
+            onClick={handleClick}
+            endIcon={<SendIcon />}
+          >
+            Run
+          </Button>
         </div>
       </div>
       <div className="main">
